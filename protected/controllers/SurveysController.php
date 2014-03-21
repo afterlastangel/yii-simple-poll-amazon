@@ -28,7 +28,7 @@ class SurveysController extends Controller
 	{
 		return array(
 			array('allow',  // allow all users to perform 'index' and 'view' actions
-				'actions'=>array('index','view'),
+				'actions'=>array('index','view','submit','results'),
 				'users'=>array('*'),
 			),
 			array('allow', // allow authenticated user to perform 'create' and 'update' actions
@@ -52,8 +52,24 @@ class SurveysController extends Controller
 	public function actionView($id)
 	{
 		$this->render('view',array(
-			'model'=>$this->loadModel($id),
+			'model'=>$this->loadModel($id)->with('questions')->with('answers'),
 		));
+	}
+	
+	/**
+	 * Display survey results
+	 */
+	public function actionResults($id)
+	{
+	}
+	
+	/**
+	 * Submit a form result
+	 * If creation is successful, the browser will be redirected to the 'results' page.
+	 */
+	public function actionSubmit($id)
+	{
+		 $this->redirect(array('surveys/results'));
 	}
 
 	/**

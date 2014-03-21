@@ -16,13 +16,13 @@ $this->menu=array(
 );
 ?>
 
-<h1>View Surveys #<?php echo $model->id; ?></h1>
+<h1>Survey: <?php echo $model->name; ?></h1>
 
-<?php $this->widget('zii.widgets.CDetailView', array(
-	'data'=>$model,
-	'attributes'=>array(
-		'id',
-		'name',
-		'is_activated',
-	),
-)); ?>
+<form action='<?php echo $this->createUrl('surveys/submit',array('id'=>$model->id))?>'>
+<?php
+foreach ($model->questions as $question) {
+	$this->renderPartial('/questions/view',array('model' => $question)); 
+}
+?>
+<input type="submit" value="Submit">
+</form>

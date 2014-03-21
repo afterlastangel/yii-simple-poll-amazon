@@ -52,7 +52,7 @@ class QuestionsController extends Controller
 	public function actionView($id)
 	{
 		$this->render('view',array(
-			'model'=>$this->loadModel($id),
+			'model'=>$this->loadModel($id)->with('anwers'),
 		));
 	}
 
