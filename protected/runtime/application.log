@@ -547,3 +547,381 @@ Stack trace:
 REQUEST_URI=/yii-simple-poll-amazon/surveys/results
 HTTP_REFERER=http://l.chk.vn/yii-simple-poll-amazon/surveys/1
 ---
+2014/03/22 16:21:59 [error] [exception.CHttpException.400] exception 'CHttpException' with message 'Your request is invalid.' in /opt/project/amazon/yii/framework/web/CController.php:336
+Stack trace:
+#0 /opt/project/amazon/yii/framework/web/CController.php(309): CController->invalidActionParams(Object(CInlineAction))
+#1 /opt/project/amazon/yii/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#2 /opt/project/amazon/yii/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#3 /opt/project/amazon/yii/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#4 /opt/project/amazon/yii/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#5 /opt/project/amazon/yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#6 /opt/project/amazon/yii/framework/web/CController.php(291): CFilterChain->run()
+#7 /opt/project/amazon/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#8 /opt/project/amazon/yii/framework/web/CWebApplication.php(282): CController->run('results')
+#9 /opt/project/amazon/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('surveys/results')
+#10 /opt/project/amazon/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#11 /opt/project/amazon/yii-simple-poll-amazon/index.php(13): CApplication->run()
+#12 {main}
+REQUEST_URI=/yii-simple-poll-amazon/surveys/results
+HTTP_REFERER=http://l.chk.vn/yii-simple-poll-amazon/surveys/1
+---
+2014/03/23 16:18:50 [error] [php] Undefined index: Surveys (/opt/project/amazon/yii-simple-poll-amazon/protected/controllers/SurveysController.php:72)
+Stack trace:
+#0 /opt/project/amazon/yii/framework/web/actions/CInlineAction.php(47): CInlineAction->runWithParamsInternal()
+#1 /opt/project/amazon/yii/framework/web/CController.php(308): CInlineAction->runWithParams()
+#2 /opt/project/amazon/yii/framework/web/filters/CFilterChain.php(133): SurveysController->runAction()
+#3 /opt/project/amazon/yii/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#4 /opt/project/amazon/yii/framework/web/CController.php(1145): CAccessControlFilter->filter()
+#5 /opt/project/amazon/yii/framework/web/filters/CInlineFilter.php(58): SurveysController->filterAccessControl()
+#6 /opt/project/amazon/yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter()
+#7 /opt/project/amazon/yii/framework/web/CController.php(291): CFilterChain->run()
+#8 /opt/project/amazon/yii/framework/web/CController.php(265): SurveysController->runActionWithFilters()
+#9 /opt/project/amazon/yii/framework/web/CWebApplication.php(282): SurveysController->run()
+#10 /opt/project/amazon/yii/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#11 /opt/project/amazon/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#12 /opt/project/amazon/yii-simple-poll-amazon/index.php(13): CWebApplication->run()
+REQUEST_URI=/yii-simple-poll-amazon/surveys/submit/1?survey%5B1%5D%5B1%5D=2&survey%5B1%5D%5B2%5D=3
+in /opt/project/amazon/yii-simple-poll-amazon/protected/controllers/SurveysController.php (72)
+in /opt/project/amazon/yii-simple-poll-amazon/index.php (13)
+2014/03/23 16:19:12 [error] [php] Undefined index: Surveys (/opt/project/amazon/yii-simple-poll-amazon/protected/controllers/SurveysController.php:72)
+Stack trace:
+#0 /opt/project/amazon/yii/framework/web/actions/CInlineAction.php(47): CInlineAction->runWithParamsInternal()
+#1 /opt/project/amazon/yii/framework/web/CController.php(308): CInlineAction->runWithParams()
+#2 /opt/project/amazon/yii/framework/web/filters/CFilterChain.php(133): SurveysController->runAction()
+#3 /opt/project/amazon/yii/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#4 /opt/project/amazon/yii/framework/web/CController.php(1145): CAccessControlFilter->filter()
+#5 /opt/project/amazon/yii/framework/web/filters/CInlineFilter.php(58): SurveysController->filterAccessControl()
+#6 /opt/project/amazon/yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter()
+#7 /opt/project/amazon/yii/framework/web/CController.php(291): CFilterChain->run()
+#8 /opt/project/amazon/yii/framework/web/CController.php(265): SurveysController->runActionWithFilters()
+#9 /opt/project/amazon/yii/framework/web/CWebApplication.php(282): SurveysController->run()
+#10 /opt/project/amazon/yii/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#11 /opt/project/amazon/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#12 /opt/project/amazon/yii-simple-poll-amazon/index.php(13): CWebApplication->run()
+REQUEST_URI=/yii-simple-poll-amazon/surveys/submit/1?survey%5B1%5D%5B1%5D=2&survey%5B1%5D%5B2%5D=3
+in /opt/project/amazon/yii-simple-poll-amazon/protected/controllers/SurveysController.php (72)
+in /opt/project/amazon/yii-simple-poll-amazon/index.php (13)
+2014/03/23 16:19:30 [error] [php] Undefined index: Surveys (/opt/project/amazon/yii-simple-poll-amazon/protected/controllers/SurveysController.php:72)
+Stack trace:
+#0 /opt/project/amazon/yii/framework/web/actions/CInlineAction.php(47): CInlineAction->runWithParamsInternal()
+#1 /opt/project/amazon/yii/framework/web/CController.php(308): CInlineAction->runWithParams()
+#2 /opt/project/amazon/yii/framework/web/filters/CFilterChain.php(133): SurveysController->runAction()
+#3 /opt/project/amazon/yii/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#4 /opt/project/amazon/yii/framework/web/CController.php(1145): CAccessControlFilter->filter()
+#5 /opt/project/amazon/yii/framework/web/filters/CInlineFilter.php(58): SurveysController->filterAccessControl()
+#6 /opt/project/amazon/yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter()
+#7 /opt/project/amazon/yii/framework/web/CController.php(291): CFilterChain->run()
+#8 /opt/project/amazon/yii/framework/web/CController.php(265): SurveysController->runActionWithFilters()
+#9 /opt/project/amazon/yii/framework/web/CWebApplication.php(282): SurveysController->run()
+#10 /opt/project/amazon/yii/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#11 /opt/project/amazon/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#12 /opt/project/amazon/yii-simple-poll-amazon/index.php(13): CWebApplication->run()
+REQUEST_URI=/yii-simple-poll-amazon/surveys/submit/1?survey%5B1%5D%5B1%5D=2&survey%5B1%5D%5B2%5D=3
+in /opt/project/amazon/yii-simple-poll-amazon/protected/controllers/SurveysController.php (72)
+in /opt/project/amazon/yii-simple-poll-amazon/index.php (13)
+2014/03/23 16:19:38 [error] [php] Undefined index: survey (/opt/project/amazon/yii-simple-poll-amazon/protected/controllers/SurveysController.php:72)
+Stack trace:
+#0 /opt/project/amazon/yii/framework/web/actions/CInlineAction.php(47): CInlineAction->runWithParamsInternal()
+#1 /opt/project/amazon/yii/framework/web/CController.php(308): CInlineAction->runWithParams()
+#2 /opt/project/amazon/yii/framework/web/filters/CFilterChain.php(133): SurveysController->runAction()
+#3 /opt/project/amazon/yii/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#4 /opt/project/amazon/yii/framework/web/CController.php(1145): CAccessControlFilter->filter()
+#5 /opt/project/amazon/yii/framework/web/filters/CInlineFilter.php(58): SurveysController->filterAccessControl()
+#6 /opt/project/amazon/yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter()
+#7 /opt/project/amazon/yii/framework/web/CController.php(291): CFilterChain->run()
+#8 /opt/project/amazon/yii/framework/web/CController.php(265): SurveysController->runActionWithFilters()
+#9 /opt/project/amazon/yii/framework/web/CWebApplication.php(282): SurveysController->run()
+#10 /opt/project/amazon/yii/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#11 /opt/project/amazon/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#12 /opt/project/amazon/yii-simple-poll-amazon/index.php(13): CWebApplication->run()
+REQUEST_URI=/yii-simple-poll-amazon/surveys/submit/1?survey%5B1%5D%5B1%5D=2&survey%5B1%5D%5B2%5D=3
+in /opt/project/amazon/yii-simple-poll-amazon/protected/controllers/SurveysController.php (72)
+in /opt/project/amazon/yii-simple-poll-amazon/index.php (13)
+2014/03/23 16:19:48 [error] [php] Undefined index: survey (/opt/project/amazon/yii-simple-poll-amazon/protected/controllers/SurveysController.php:72)
+Stack trace:
+#0 /opt/project/amazon/yii/framework/web/actions/CInlineAction.php(47): CInlineAction->runWithParamsInternal()
+#1 /opt/project/amazon/yii/framework/web/CController.php(308): CInlineAction->runWithParams()
+#2 /opt/project/amazon/yii/framework/web/filters/CFilterChain.php(133): SurveysController->runAction()
+#3 /opt/project/amazon/yii/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#4 /opt/project/amazon/yii/framework/web/CController.php(1145): CAccessControlFilter->filter()
+#5 /opt/project/amazon/yii/framework/web/filters/CInlineFilter.php(58): SurveysController->filterAccessControl()
+#6 /opt/project/amazon/yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter()
+#7 /opt/project/amazon/yii/framework/web/CController.php(291): CFilterChain->run()
+#8 /opt/project/amazon/yii/framework/web/CController.php(265): SurveysController->runActionWithFilters()
+#9 /opt/project/amazon/yii/framework/web/CWebApplication.php(282): SurveysController->run()
+#10 /opt/project/amazon/yii/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#11 /opt/project/amazon/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#12 /opt/project/amazon/yii-simple-poll-amazon/index.php(13): CWebApplication->run()
+REQUEST_URI=/yii-simple-poll-amazon/surveys/submit/1?survey%5B1%5D%5B1%5D=2&survey%5B1%5D%5B2%5D=3
+in /opt/project/amazon/yii-simple-poll-amazon/protected/controllers/SurveysController.php (72)
+in /opt/project/amazon/yii-simple-poll-amazon/index.php (13)
+2014/03/23 16:20:11 [error] [exception.CHttpException.400] exception 'CHttpException' with message 'Your request is invalid.' in /opt/project/amazon/yii/framework/web/CController.php:336
+Stack trace:
+#0 /opt/project/amazon/yii/framework/web/CController.php(309): CController->invalidActionParams(Object(CInlineAction))
+#1 /opt/project/amazon/yii/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#2 /opt/project/amazon/yii/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#3 /opt/project/amazon/yii/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#4 /opt/project/amazon/yii/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#5 /opt/project/amazon/yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#6 /opt/project/amazon/yii/framework/web/CController.php(291): CFilterChain->run()
+#7 /opt/project/amazon/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#8 /opt/project/amazon/yii/framework/web/CWebApplication.php(282): CController->run('results')
+#9 /opt/project/amazon/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('surveys/results')
+#10 /opt/project/amazon/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#11 /opt/project/amazon/yii-simple-poll-amazon/index.php(13): CApplication->run()
+#12 {main}
+REQUEST_URI=/yii-simple-poll-amazon/surveys/results
+HTTP_REFERER=http://l.chk.vn/yii-simple-poll-amazon/surveys/1
+---
+2014/03/23 16:20:56 [error] [exception.CHttpException.400] exception 'CHttpException' with message 'Your request is invalid.' in /opt/project/amazon/yii/framework/web/CController.php:336
+Stack trace:
+#0 /opt/project/amazon/yii/framework/web/CController.php(309): CController->invalidActionParams(Object(CInlineAction))
+#1 /opt/project/amazon/yii/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#2 /opt/project/amazon/yii/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#3 /opt/project/amazon/yii/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#4 /opt/project/amazon/yii/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#5 /opt/project/amazon/yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#6 /opt/project/amazon/yii/framework/web/CController.php(291): CFilterChain->run()
+#7 /opt/project/amazon/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#8 /opt/project/amazon/yii/framework/web/CWebApplication.php(282): CController->run('results')
+#9 /opt/project/amazon/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('surveys/results')
+#10 /opt/project/amazon/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#11 /opt/project/amazon/yii-simple-poll-amazon/index.php(13): CApplication->run()
+#12 {main}
+REQUEST_URI=/yii-simple-poll-amazon/surveys/results
+HTTP_REFERER=http://l.chk.vn/yii-simple-poll-amazon/surveys/1
+---
+2014/03/23 16:21:06 [error] [exception.CHttpException.400] exception 'CHttpException' with message 'Your request is invalid.' in /opt/project/amazon/yii/framework/web/CController.php:336
+Stack trace:
+#0 /opt/project/amazon/yii/framework/web/CController.php(309): CController->invalidActionParams(Object(CInlineAction))
+#1 /opt/project/amazon/yii/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#2 /opt/project/amazon/yii/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#3 /opt/project/amazon/yii/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#4 /opt/project/amazon/yii/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#5 /opt/project/amazon/yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#6 /opt/project/amazon/yii/framework/web/CController.php(291): CFilterChain->run()
+#7 /opt/project/amazon/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#8 /opt/project/amazon/yii/framework/web/CWebApplication.php(282): CController->run('results')
+#9 /opt/project/amazon/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('surveys/results')
+#10 /opt/project/amazon/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#11 /opt/project/amazon/yii-simple-poll-amazon/index.php(13): CApplication->run()
+#12 {main}
+REQUEST_URI=/yii-simple-poll-amazon/surveys/results
+HTTP_REFERER=http://l.chk.vn/yii-simple-poll-amazon/surveys/1
+---
+2014/03/23 16:21:28 [error] [exception.CHttpException.400] exception 'CHttpException' with message 'Your request is invalid.' in /opt/project/amazon/yii/framework/web/CController.php:336
+Stack trace:
+#0 /opt/project/amazon/yii/framework/web/CController.php(309): CController->invalidActionParams(Object(CInlineAction))
+#1 /opt/project/amazon/yii/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#2 /opt/project/amazon/yii/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#3 /opt/project/amazon/yii/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#4 /opt/project/amazon/yii/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#5 /opt/project/amazon/yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#6 /opt/project/amazon/yii/framework/web/CController.php(291): CFilterChain->run()
+#7 /opt/project/amazon/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#8 /opt/project/amazon/yii/framework/web/CWebApplication.php(282): CController->run('results')
+#9 /opt/project/amazon/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('surveys/results')
+#10 /opt/project/amazon/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#11 /opt/project/amazon/yii-simple-poll-amazon/index.php(13): CApplication->run()
+#12 {main}
+REQUEST_URI=/yii-simple-poll-amazon/surveys/results
+HTTP_REFERER=http://l.chk.vn/yii-simple-poll-amazon/surveys/1
+---
+2014/03/23 16:22:50 [error] [exception.CHttpException.400] exception 'CHttpException' with message 'Your request is invalid.' in /opt/project/amazon/yii/framework/web/CController.php:336
+Stack trace:
+#0 /opt/project/amazon/yii/framework/web/CController.php(309): CController->invalidActionParams(Object(CInlineAction))
+#1 /opt/project/amazon/yii/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#2 /opt/project/amazon/yii/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#3 /opt/project/amazon/yii/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#4 /opt/project/amazon/yii/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#5 /opt/project/amazon/yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#6 /opt/project/amazon/yii/framework/web/CController.php(291): CFilterChain->run()
+#7 /opt/project/amazon/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#8 /opt/project/amazon/yii/framework/web/CWebApplication.php(282): CController->run('results')
+#9 /opt/project/amazon/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('surveys/results')
+#10 /opt/project/amazon/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#11 /opt/project/amazon/yii-simple-poll-amazon/index.php(13): CApplication->run()
+#12 {main}
+REQUEST_URI=/yii-simple-poll-amazon/surveys/results
+HTTP_REFERER=http://l.chk.vn/yii-simple-poll-amazon/surveys/1
+---
+2014/03/23 16:23:48 [error] [exception.CHttpException.400] exception 'CHttpException' with message 'Your request is invalid.' in /opt/project/amazon/yii/framework/web/CController.php:336
+Stack trace:
+#0 /opt/project/amazon/yii/framework/web/CController.php(309): CController->invalidActionParams(Object(CInlineAction))
+#1 /opt/project/amazon/yii/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#2 /opt/project/amazon/yii/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#3 /opt/project/amazon/yii/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#4 /opt/project/amazon/yii/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#5 /opt/project/amazon/yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#6 /opt/project/amazon/yii/framework/web/CController.php(291): CFilterChain->run()
+#7 /opt/project/amazon/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#8 /opt/project/amazon/yii/framework/web/CWebApplication.php(282): CController->run('results')
+#9 /opt/project/amazon/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('surveys/results')
+#10 /opt/project/amazon/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#11 /opt/project/amazon/yii-simple-poll-amazon/index.php(13): CApplication->run()
+#12 {main}
+REQUEST_URI=/yii-simple-poll-amazon/surveys/results
+HTTP_REFERER=http://l.chk.vn/yii-simple-poll-amazon/surveys/1
+---
+2014/03/23 16:24:21 [error] [exception.CHttpException.400] exception 'CHttpException' with message 'Your request is invalid.' in /opt/project/amazon/yii/framework/web/CController.php:336
+Stack trace:
+#0 /opt/project/amazon/yii/framework/web/CController.php(309): CController->invalidActionParams(Object(CInlineAction))
+#1 /opt/project/amazon/yii/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#2 /opt/project/amazon/yii/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#3 /opt/project/amazon/yii/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#4 /opt/project/amazon/yii/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#5 /opt/project/amazon/yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#6 /opt/project/amazon/yii/framework/web/CController.php(291): CFilterChain->run()
+#7 /opt/project/amazon/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#8 /opt/project/amazon/yii/framework/web/CWebApplication.php(282): CController->run('results')
+#9 /opt/project/amazon/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('surveys/results')
+#10 /opt/project/amazon/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#11 /opt/project/amazon/yii-simple-poll-amazon/index.php(13): CApplication->run()
+#12 {main}
+REQUEST_URI=/yii-simple-poll-amazon/surveys/results
+HTTP_REFERER=http://l.chk.vn/yii-simple-poll-amazon/surveys/1
+---
+2014/03/23 16:51:27 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "results".' in /opt/project/amazon/yii/framework/web/CController.php:483
+Stack trace:
+#0 /opt/project/amazon/yii/framework/web/CController.php(270): CController->missingAction('results')
+#1 /opt/project/amazon/yii/framework/web/CWebApplication.php(282): CController->run('results')
+#2 /opt/project/amazon/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('surveys/results')
+#3 /opt/project/amazon/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#4 /opt/project/amazon/yii-simple-poll-amazon/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/yii-simple-poll-amazon/surveys/results
+HTTP_REFERER=http://l.chk.vn/yii-simple-poll-amazon/surveys/1
+---
+2014/03/23 17:19:22 [error] [php] Undefined variable: results (/opt/project/amazon/yii-simple-poll-amazon/protected/views/questions/result.php:5)
+Stack trace:
+#0 /opt/project/amazon/yii/framework/web/CController.php(869): SurveysController->renderFile()
+#1 /opt/project/amazon/yii-simple-poll-amazon/protected/views/surveys/result.php(15): SurveysController->renderPartial()
+#2 /opt/project/amazon/yii/framework/web/CBaseController.php(126): require()
+#3 /opt/project/amazon/yii/framework/web/CBaseController.php(95): SurveysController->renderInternal()
+#4 /opt/project/amazon/yii/framework/web/CController.php(869): SurveysController->renderFile()
+#5 /opt/project/amazon/yii/framework/web/CController.php(782): SurveysController->renderPartial()
+#6 /opt/project/amazon/yii-simple-poll-amazon/protected/controllers/SurveysController.php(71): SurveysController->render()
+#7 unknown(0): SurveysController->actionResult()
+#8 /opt/project/amazon/yii/framework/web/actions/CAction.php(108): ReflectionMethod->invokeArgs()
+#9 /opt/project/amazon/yii/framework/web/actions/CInlineAction.php(47): CInlineAction->runWithParamsInternal()
+#10 /opt/project/amazon/yii/framework/web/CController.php(308): CInlineAction->runWithParams()
+#11 /opt/project/amazon/yii/framework/web/filters/CFilterChain.php(133): SurveysController->runAction()
+#12 /opt/project/amazon/yii/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#13 /opt/project/amazon/yii/framework/web/CController.php(1145): CAccessControlFilter->filter()
+#14 /opt/project/amazon/yii/framework/web/filters/CInlineFilter.php(58): SurveysController->filterAccessControl()
+#15 /opt/project/amazon/yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter()
+#16 /opt/project/amazon/yii/framework/web/CController.php(291): CFilterChain->run()
+#17 /opt/project/amazon/yii/framework/web/CController.php(265): SurveysController->runActionWithFilters()
+#18 /opt/project/amazon/yii/framework/web/CWebApplication.php(282): SurveysController->run()
+#19 /opt/project/amazon/yii/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#20 /opt/project/amazon/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#21 /opt/project/amazon/yii-simple-poll-amazon/index.php(13): CWebApplication->run()
+REQUEST_URI=/yii-simple-poll-amazon/surveys/result/1
+in /opt/project/amazon/yii-simple-poll-amazon/protected/views/questions/result.php (5)
+in /opt/project/amazon/yii-simple-poll-amazon/protected/views/surveys/result.php (15)
+in /opt/project/amazon/yii-simple-poll-amazon/protected/controllers/SurveysController.php (71)
+2014/03/23 17:23:45 [error] [php] Undefined variable: results (/opt/project/amazon/yii-simple-poll-amazon/protected/views/questions/result.php:5)
+Stack trace:
+#0 /opt/project/amazon/yii/framework/web/CController.php(869): SurveysController->renderFile()
+#1 /opt/project/amazon/yii-simple-poll-amazon/protected/views/surveys/result.php(15): SurveysController->renderPartial()
+#2 /opt/project/amazon/yii/framework/web/CBaseController.php(126): require()
+#3 /opt/project/amazon/yii/framework/web/CBaseController.php(95): SurveysController->renderInternal()
+#4 /opt/project/amazon/yii/framework/web/CController.php(869): SurveysController->renderFile()
+#5 /opt/project/amazon/yii/framework/web/CController.php(782): SurveysController->renderPartial()
+#6 /opt/project/amazon/yii-simple-poll-amazon/protected/controllers/SurveysController.php(71): SurveysController->render()
+#7 unknown(0): SurveysController->actionResult()
+#8 /opt/project/amazon/yii/framework/web/actions/CAction.php(108): ReflectionMethod->invokeArgs()
+#9 /opt/project/amazon/yii/framework/web/actions/CInlineAction.php(47): CInlineAction->runWithParamsInternal()
+#10 /opt/project/amazon/yii/framework/web/CController.php(308): CInlineAction->runWithParams()
+#11 /opt/project/amazon/yii/framework/web/filters/CFilterChain.php(133): SurveysController->runAction()
+#12 /opt/project/amazon/yii/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#13 /opt/project/amazon/yii/framework/web/CController.php(1145): CAccessControlFilter->filter()
+#14 /opt/project/amazon/yii/framework/web/filters/CInlineFilter.php(58): SurveysController->filterAccessControl()
+#15 /opt/project/amazon/yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter()
+#16 /opt/project/amazon/yii/framework/web/CController.php(291): CFilterChain->run()
+#17 /opt/project/amazon/yii/framework/web/CController.php(265): SurveysController->runActionWithFilters()
+#18 /opt/project/amazon/yii/framework/web/CWebApplication.php(282): SurveysController->run()
+#19 /opt/project/amazon/yii/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#20 /opt/project/amazon/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#21 /opt/project/amazon/yii-simple-poll-amazon/index.php(13): CWebApplication->run()
+REQUEST_URI=/yii-simple-poll-amazon/surveys/result/1
+in /opt/project/amazon/yii-simple-poll-amazon/protected/views/questions/result.php (5)
+in /opt/project/amazon/yii-simple-poll-amazon/protected/views/surveys/result.php (15)
+in /opt/project/amazon/yii-simple-poll-amazon/protected/controllers/SurveysController.php (71)
+2014/03/23 17:24:14 [error] [php] Undefined variable: results (/opt/project/amazon/yii-simple-poll-amazon/protected/views/questions/result.php:5)
+Stack trace:
+#0 /opt/project/amazon/yii/framework/web/CController.php(869): SurveysController->renderFile()
+#1 /opt/project/amazon/yii-simple-poll-amazon/protected/views/surveys/result.php(15): SurveysController->renderPartial()
+#2 /opt/project/amazon/yii/framework/web/CBaseController.php(126): require()
+#3 /opt/project/amazon/yii/framework/web/CBaseController.php(95): SurveysController->renderInternal()
+#4 /opt/project/amazon/yii/framework/web/CController.php(869): SurveysController->renderFile()
+#5 /opt/project/amazon/yii/framework/web/CController.php(782): SurveysController->renderPartial()
+#6 /opt/project/amazon/yii-simple-poll-amazon/protected/controllers/SurveysController.php(71): SurveysController->render()
+#7 unknown(0): SurveysController->actionResult()
+#8 /opt/project/amazon/yii/framework/web/actions/CAction.php(108): ReflectionMethod->invokeArgs()
+#9 /opt/project/amazon/yii/framework/web/actions/CInlineAction.php(47): CInlineAction->runWithParamsInternal()
+#10 /opt/project/amazon/yii/framework/web/CController.php(308): CInlineAction->runWithParams()
+#11 /opt/project/amazon/yii/framework/web/filters/CFilterChain.php(133): SurveysController->runAction()
+#12 /opt/project/amazon/yii/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#13 /opt/project/amazon/yii/framework/web/CController.php(1145): CAccessControlFilter->filter()
+#14 /opt/project/amazon/yii/framework/web/filters/CInlineFilter.php(58): SurveysController->filterAccessControl()
+#15 /opt/project/amazon/yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter()
+#16 /opt/project/amazon/yii/framework/web/CController.php(291): CFilterChain->run()
+#17 /opt/project/amazon/yii/framework/web/CController.php(265): SurveysController->runActionWithFilters()
+#18 /opt/project/amazon/yii/framework/web/CWebApplication.php(282): SurveysController->run()
+#19 /opt/project/amazon/yii/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#20 /opt/project/amazon/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#21 /opt/project/amazon/yii-simple-poll-amazon/index.php(13): CWebApplication->run()
+REQUEST_URI=/yii-simple-poll-amazon/surveys/result/1
+in /opt/project/amazon/yii-simple-poll-amazon/protected/views/questions/result.php (5)
+in /opt/project/amazon/yii-simple-poll-amazon/protected/views/surveys/result.php (15)
+in /opt/project/amazon/yii-simple-poll-amazon/protected/controllers/SurveysController.php (71)
+2014/03/23 17:28:56 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "survey/index".' in /opt/project/amazon/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /opt/project/amazon/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('survey/index')
+#1 /opt/project/amazon/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /opt/project/amazon/yii-simple-poll-amazon/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/yii-simple-poll-amazon/survey/index
+HTTP_REFERER=http://l.chk.vn/yii-simple-poll-amazon/site/index
+---
+2014/03/23 17:29:00 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "survey/index".' in /opt/project/amazon/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /opt/project/amazon/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('survey/index')
+#1 /opt/project/amazon/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /opt/project/amazon/yii-simple-poll-amazon/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/yii-simple-poll-amazon/survey/index
+HTTP_REFERER=http://l.chk.vn/yii-simple-poll-amazon/site/index
+---
+2014/03/23 17:29:04 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "survey/index".' in /opt/project/amazon/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /opt/project/amazon/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('survey/index')
+#1 /opt/project/amazon/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /opt/project/amazon/yii-simple-poll-amazon/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/yii-simple-poll-amazon/survey/index
+HTTP_REFERER=http://l.chk.vn/yii-simple-poll-amazon/site/index
+---
+2014/03/23 17:30:30 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "admin".' in /opt/project/amazon/yii/framework/web/CController.php:483
+Stack trace:
+#0 /opt/project/amazon/yii/framework/web/CController.php(270): CController->missingAction('admin')
+#1 /opt/project/amazon/yii/framework/web/CWebApplication.php(282): CController->run('admin')
+#2 /opt/project/amazon/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('site/admin')
+#3 /opt/project/amazon/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#4 /opt/project/amazon/yii-simple-poll-amazon/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/yii-simple-poll-amazon/site/admin
+HTTP_REFERER=http://l.chk.vn/yii-simple-poll-amazon/surveys/index
+---
+2014/03/23 17:41:05 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "admin".' in /opt/project/amazon/yii/framework/web/CController.php:483
+Stack trace:
+#0 /opt/project/amazon/yii/framework/web/CController.php(270): CController->missingAction('admin')
+#1 /opt/project/amazon/yii/framework/web/CWebApplication.php(282): CController->run('admin')
+#2 /opt/project/amazon/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('site/admin')
+#3 /opt/project/amazon/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#4 /opt/project/amazon/yii-simple-poll-amazon/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/yii-simple-poll-amazon/site/admin
+HTTP_REFERER=http://l.chk.vn/yii-simple-poll-amazon/site/page?view=about
+---

@@ -31,6 +31,12 @@ return array(
 
 	// application components
 	'components'=>array(
+		'cache'=>array(
+			'class'=>'CRedisCache',
+			'hostname'=>'localhost',
+			'port'=>6379,
+			'database'=>0,
+		),
 		'user'=>array(
 			// enable cookie-based authentication
 			'allowAutoLogin'=>true,

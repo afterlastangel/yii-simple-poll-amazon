@@ -7,6 +7,7 @@ $this->breadcrumbs=array(
 );
 ?>
 <h1>About</h1>
-
-<p>This is a "static" page. You may change the content of this page
-by updating the file <code><?php echo __FILE__; ?></code>.</p>
+Project link: <a href="https://github.com/afterlastangel/yii-simple-poll-amazon/" target="_blank">https://github.com/afterlastangel/yii-simple-poll-amazon/</a>
+<p>
+This is a simple poll that is support scaling and load balancing
+</p>

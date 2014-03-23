@@ -5,8 +5,8 @@ class SurveysController extends Controller
 	/**
 	 * @var string the default layout for the views. Defaults to '//layouts/column2', meaning
 	 * using two-column layout. See 'protected/views/layouts/column2.php'.
-	 */
 	public $layout='//layouts/column2';
+	 */
 
 	/**
 	 * @return array action filters
@@ -28,7 +28,7 @@ class SurveysController extends Controller
 	{
 		return array(
 			array('allow',  // allow all users to perform 'index' and 'view' actions
-				'actions'=>array('index','view','submit','results'),
+				'actions'=>array('index','view','submit','result'),
 				'users'=>array('*'),
 			),
 			array('allow', // allow authenticated user to perform 'create' and 'update' actions
@@ -59,8 +59,16 @@ class SurveysController extends Controller
 	/**
 	 * Display survey results
 	 */
-	public function actionResults($id)
+	public function actionResult($id)
 	{
+		$redis = new Redis();
+		$redis->connect('127.0.0.1', 6379);
+		$results = $redis->hgetall('results_'.$id);		
+		$redis->close();
+		$this->render('result',array(
+			'model'=>$this->loadModel($id)->with('questions')->with('answers'),
+			'results'=> $results,
+		));
 	}
 	
 	/**
@@ -69,7 +77,17 @@ class SurveysController extends Controller
 	 */
 	public function actionSubmit($id)
 	{
-		 $this->redirect(array('surveys/results'));
+		$redis = new Redis();
+		$redis->connect('127.0.0.1', 6379);
+		if (isset($_POST['survey'])) {
+			$survey = $_POST['survey'];
+			foreach ($survey as $question => $answer)	{
+				$redis->hIncrBy('results_'.$id, $answer, 1);
+			}
+		}
+		$redis->close();
+		
+		$this->redirect($this->createUrl('surveys/result',array('id'=>$id)));
 	}
 
 	/**

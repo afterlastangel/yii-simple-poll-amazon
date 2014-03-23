@@ -18,7 +18,7 @@ $this->menu=array(
 
 <h1>Survey: <?php echo $model->name; ?></h1>
 
-<form action='<?php echo $this->createUrl('surveys/submit',array('id'=>$model->id))?>'>
+<form name="survey" method="POST" action='<?php echo $this->createUrl('surveys/submit',array('id'=>$model->id))?>'>
 <?php
 foreach ($model->questions as $question) {
 	$this->renderPartial('/questions/view',array('model' => $question)); 
