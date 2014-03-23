@@ -81,6 +81,9 @@ return array(
 				*/
 			),
 		),
+		'session'=>array(
+			'class' => 'CCacheHttpSession',
+		),
 	),
 
 	// application-level parameters that can be accessed

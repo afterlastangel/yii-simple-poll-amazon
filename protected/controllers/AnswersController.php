@@ -60,7 +60,7 @@ class AnswersController extends Controller
 	 * Creates a new model.
 	 * If creation is successful, the browser will be redirected to the 'view' page.
 	 */
-	public function actionCreate()
+	public function actionCreate($questionId=null)
 	{
 		$model=new Answers;
 
@@ -71,11 +71,15 @@ class AnswersController extends Controller
 		{
 			$model->attributes=$_POST['Answers'];
 			if($model->save())
-				$this->redirect(array('view','id'=>$model->id));
+				$this->redirect(array('questions/view','id'=>$model->question_id));
+		}
+		if ($questionId != null) {
+			$model->setAttributes(array('question_id'=>$questionId));
 		}
 
 		$this->render('create',array(
 			'model'=>$model,
+			'questionId'=>$questionId,
 		));
 	}
 
@@ -131,15 +135,20 @@ class AnswersController extends Controller
 	/**
 	 * Manages all models.
 	 */
-	public function actionAdmin()
+	public function actionAdmin($questionId=null)
 	{
 		$model=new Answers('search');
 		$model->unsetAttributes();  // clear any default values
+		$hideQuestion = false;
 		if(isset($_GET['Answers']))
 			$model->attributes=$_GET['Answers'];
-
+		if (isset($questionId)) {
+			$model->setAttributes(array('question_id'=>$questionId));
+		}
+		
 		$this->render('admin',array(
 			'model'=>$model,
+			'questionId'=>$questionId,
 		));
 	}
 

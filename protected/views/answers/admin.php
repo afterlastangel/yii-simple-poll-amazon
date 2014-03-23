@@ -8,10 +8,12 @@ $this->breadcrumbs=array(
 );
 
 $this->menu=array(
-	array('label'=>'List Answers', 'url'=>array('index')),
-	array('label'=>'Create Answers', 'url'=>array('create')),
+	array('label'=>'Create Answers', 'url'=>array('create','questionId'=>$questionId)),
 );
 
+if ($questionId) {
+	$this->menu[] = 	array('label'=>'Back to question', 'url'=>array('questions/view','id'=>$questionId));
+}
 Yii::app()->clientScript->registerScript('search', "
 $('.search-button').click(function(){
 	$('.search-form').toggle();
@@ -29,8 +31,11 @@ $('.search-form form').submit(function(){
 <h1>Manage Answers</h1>
 
 <p>
-You may optionally enter a comparison operator (<b>&lt;</b>, <b>&lt;=</b>, <b>&gt;</b>, <b>&gt;=</b>, <b>&lt;&gt;</b>
-or <b>=</b>) at the beginning of each of your search values to specify how the comparison should be done.
+<?php 
+if ($questionId!= null) {
+echo "Answers for question : " . $questionId;
+}
+?>
 </p>
 
 <?php echo CHtml::link('Advanced Search','#',array('class'=>'search-button')); ?>
@@ -40,17 +45,19 @@ or <b>=</b>) at the beginning of each of your search values to specify how the c
 )); ?>
 </div><!-- search-form -->
 
-<?php $this->widget('zii.widgets.grid.CGridView', array(
-	'id'=>'answers-grid',
-	'dataProvider'=>$model->search(),
-	'filter'=>$model,
-	'columns'=>array(
+<?php
+
+$columns =array(
 		'id',
 		'value',
 		'description',
-		'question_id',
 		array(
 			'class'=>'CButtonColumn',
 		),
-	),
+	);
+$this->widget('zii.widgets.grid.CGridView', array(
+	'id'=>'answers-grid',
+	'dataProvider'=>$model->search(),
+	'filter'=>$model,
+	'columns'=>$columns,
 )); ?>

@@ -8,8 +8,11 @@ $this->breadcrumbs=array(
 );
 
 $this->menu=array(
-	array('label'=>'List Questions', 'url'=>array('index')),
-	array('label'=>'Create Questions', 'url'=>array('create')),
+	array(
+			'label'=>'Add Questions',
+			'url'=> array('questions/create','surveyId' => $surveyId)
+	),
+	array('label'=>'Back to survey', 'url'=>array('surveys/view','id'=>$surveyId)),
 );
 
 Yii::app()->clientScript->registerScript('search', "

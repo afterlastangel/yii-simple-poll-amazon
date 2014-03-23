@@ -51,8 +51,14 @@ class QuestionsController extends Controller
 	 */
 	public function actionView($id)
 	{
+		$criteria=new CDbCriteria(array('condition'=>'question_id='.$id,));
+		
+		$answers =new CActiveDataProvider('Answers', array(
+			'criteria' => $criteria,
+		));;
 		$this->render('view',array(
 			'model'=>$this->loadModel($id)->with('anwers'),
+			'answers'=>$answers,
 		));
 	}
 
@@ -60,7 +66,7 @@ class QuestionsController extends Controller
 	 * Creates a new model.
 	 * If creation is successful, the browser will be redirected to the 'view' page.
 	 */
-	public function actionCreate()
+	public function actionCreate($surveyId)
 	{
 		$model=new Questions;
 
@@ -72,6 +78,10 @@ class QuestionsController extends Controller
 			$model->attributes=$_POST['Questions'];
 			if($model->save())
 				$this->redirect(array('view','id'=>$model->id));
+		}
+		
+		if ($surveyId != null) {
+			$model->setAttributes(array('survey_id' => $surveyId));
 		}
 
 		$this->render('create',array(
@@ -131,15 +141,18 @@ class QuestionsController extends Controller
 	/**
 	 * Manages all models.
 	 */
-	public function actionAdmin()
+	public function actionAdmin($surveyId=null)
 	{
 		$model=new Questions('search');
 		$model->unsetAttributes();  // clear any default values
 		if(isset($_GET['Questions']))
 			$model->attributes=$_GET['Questions'];
-
+		if($surveyId!=null) {
+			$model->setAttributes(array('survey_id'=>$surveyId));
+		}
 		$this->render('admin',array(
 			'model'=>$model,
+			'surveyId'=>$surveyId,
 		));
 	}
 

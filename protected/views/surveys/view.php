@@ -8,6 +8,14 @@ $this->breadcrumbs=array(
 );
 
 $this->menu=array(
+	array(
+			'label'=>'Add Questions',
+			'url'=> array('questions/create','surveyId' => $model->id)
+	),
+	array(
+			'label'=>'Manage Questions',
+			'url'=> array('questions/admin','surveyId' => $model->id)
+	),
 	array('label'=>'List Surveys', 'url'=>array('index')),
 	array('label'=>'Create Surveys', 'url'=>array('create')),
 	array('label'=>'Update Surveys', 'url'=>array('update', 'id'=>$model->id)),
@@ -21,7 +29,7 @@ $this->menu=array(
 <form name="survey" method="POST" action='<?php echo $this->createUrl('surveys/submit',array('id'=>$model->id))?>'>
 <?php
 foreach ($model->questions as $question) {
-	$this->renderPartial('/questions/view',array('model' => $question)); 
+	$this->renderPartial('question_view',array('model' => $question)); 
 }
 ?>
 <input type="submit" value="Submit">
