@@ -3,16 +3,14 @@
 /* @var $model Questions */
 
 $this->breadcrumbs=array(
-	'Questions'=>array('index'),
+	'Survey'=>array('surveys/view','id'=>$model->survey_id),
 	$model->title=>array('view','id'=>$model->id),
 	'Update',
 );
 
 $this->menu=array(
-	array('label'=>'List Questions', 'url'=>array('index')),
-	array('label'=>'Create Questions', 'url'=>array('create')),
 	array('label'=>'View Questions', 'url'=>array('view', 'id'=>$model->id)),
-	array('label'=>'Manage Questions', 'url'=>array('admin')),
+	array('label'=>'Back to survey', 'url'=>array('surveys/view','id'=>$model->survey_id)),
 );
 ?>
 

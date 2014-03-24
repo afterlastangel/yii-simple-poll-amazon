@@ -3,8 +3,15 @@
 /* @var $model Surveys */
 
 $this->breadcrumbs=array(
-	'Surveys'=>array('result'),
+	'Surveys'=>array('view','id' => $model->id),
 	$model->name,
+);
+
+$this->menu=array(
+		array(
+				'label'=>'Back to survey',
+				'url'=> array('view','id' => $model->id),
+		),
 );
 ?>
 
