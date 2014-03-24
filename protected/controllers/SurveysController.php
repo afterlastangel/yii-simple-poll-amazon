@@ -2,6 +2,13 @@
 
 class SurveysController extends Controller
 {
+	public function init() 
+	{
+		$config = Yii::app()->getComponents(false);
+		$this->redisConfig['server'] = $config['cache']->hostname;
+		$this->redisConfig['port'] = $config['cache']->port;
+	}
+	public $redisConfig = array();
 	/**
 	 * @var string the default layout for the views. Defaults to '//layouts/column2', meaning
 	 * using two-column layout. See 'protected/views/layouts/column2.php'.
@@ -62,7 +69,8 @@ class SurveysController extends Controller
 	public function actionResult($id)
 	{
 		$redis = new Redis();
-		$redis->connect('127.0.0.1', 6379);
+		
+		$redis->connect($this->redisConfig['server'], $this->redisConfig['port']);
 		$results = $redis->hgetall('results_'.$id);		
 		$redis->close();
 		$this->render('result',array(
@@ -78,7 +86,7 @@ class SurveysController extends Controller
 	public function actionSubmit($id)
 	{
 		$redis = new Redis();
-		$redis->connect('127.0.0.1', 6379);
+		$redis->connect($this->redisConfig['server'], $this->redisConfig['port']);
 		if (isset($_POST['survey'])) {
 			$survey = $_POST['survey'];
 			foreach ($survey as $question => $answer)	{
